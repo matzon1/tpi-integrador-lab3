@@ -1,0 +1,24 @@
+
+.login-form{
+    background-color: rgb(250, 179, 0);
+    padding: 20px 20px 10px 15px;
+    text-shadow:0px 1px 0px #ffffff;
+    font-family:Arial;
+    border-radius:28px;
+	border:1px solid #ffffff;
+    
+}
+
+.login-form-items{
+
+    font-family:Arial;
+    border-radius:28px;
+}
+
+input{
+    border:1px solid black;
+    border-radius: 16px;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
