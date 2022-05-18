@@ -1,0 +1,21 @@
+.main-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.form-login{
+    padding-top: 50px;
+    padding-right: 10%;
+    float: right;
+    width: 300%;
+}
+
+
+.title-section {
+    padding-bottom: 10%;
+    width: 100%;
+    padding-left: 10%;
+    font-size: 20px;
+}
