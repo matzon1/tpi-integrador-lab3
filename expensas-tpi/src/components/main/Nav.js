@@ -9,7 +9,7 @@ const nav = () => {
   return (
     <div>
       <nav className="nav-bar">
-        <h1 class="logo">EXPENSAS ONLINE</h1>
+        <img className="logo" src="C:\FACU\TPI-LAB\tpi-integrador-lab3\expensas-tpi\src\components\main\isologotipo_blanco.png"></img>
         <div className="buttons">
           <button>Vecinos</button>
           <button>Administrador</button>

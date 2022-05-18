@@ -4,9 +4,8 @@
   text-shadow: 0px 1px 0px #ffffff;
   font-family: Arial;
   border-radius: 10px;
-/*   border: 1px solid #ffffff; */
   height: 30vw;
-  width: 40%;
+  width: 60%;
   color: white;
   float: right;
 }
@@ -28,6 +27,7 @@
   height: 40px;
   display: inline-block;
   font-size: 16px;
+  color: white;
 }
 
 .login-form button {

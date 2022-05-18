@@ -13,35 +13,37 @@
   height: 75px;
   width: 100vw;
   align-items: center;
-  border-bottom: 1px solid black;
-  background: rgb(70, 70, 70, 0.7);
+/*   border-bottom: 1px solid black; */
+  background: #C9D6FF;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #E2E2E2, #C9D6FF);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #E2E2E2, #C9D6FF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 
 .nav-bar .buttons {
   display: flex;
   align-items: center;
-  padding: 20px 20px 10px 15px;
+  padding: 20px 7% 10px 15px;
   margin-right: 8.5%;
 }
 
 .nav-bar .logo {
-  padding: 10px 80px;
-  color: white;
+  padding: 10px 10%;
+  filter: opacity(0.1) drop-shadow(0 0 0 black); 
+  color: black;
+  font-size: 25px;
 }
 
 .nav-bar button {
-  background-color: transparent;
+  background: #24303c;
+  border: 2px solid #1f53c5;
   border-radius: 28px;
-  border: 1px solid #ffffff;
   display: inline-block;
   cursor: pointer;
-  color: #ffffff;
-  font-family: Arial;
-  font-size: 17px;
+  color: white;
+  font-size: 18px;
   padding: 10px 27px;
   margin-right: 15px;
-  text-decoration: none;
-  text-shadow: 0px 1px 0px #ffffff;
 }
 
 
@@ -57,7 +59,7 @@
 }
 
 
-@media screen and (maxwidth: 952px) {
+@media screen and (max-width: 952px) {
   .logo {
     font-size: 20px;
     padding-left: 35px;

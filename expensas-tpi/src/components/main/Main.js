@@ -8,9 +8,9 @@ const main = () => {
   return (
     <div className="main-group">
       <div className="title-section">
-      <h1>Bienvenido a Autogestion Expensas!</h1>
+      <h1>Bienvenido a <br/>Autogestion Expensas!</h1>
       <p>
-        Una nueva experiencia en gestión de consorcios Sistema integral para la
+        Una nueva experiencia en gestión de consorcios.<br/> Sistema integral para la
         administración de edificios privados.
       </p>
       </div>
@@ -18,6 +18,7 @@ const main = () => {
         <Form />
       </div>
 {/*       <SignInForm /> */}
+    
     </div>
   );
 };

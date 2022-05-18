@@ -8,7 +8,7 @@ export const Form = () => {
   const [email, setEmail] = useState("");
   const [cellphone, setCellphone] = useState("");
   const [street, setStreet] = useState("");
-  const [streetNumber, setStreetNumber] = useState("");
+/*   const [streetNumber, setStreetNumber] = useState(""); */
   const [floor, setFloor] = useState("");
   const [apartment, setApartment] = useState("");
 
