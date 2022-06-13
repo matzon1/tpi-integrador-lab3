@@ -20,6 +20,10 @@ background: linear-gradient(to right, #E2E2E2, #C9D6FF); /* W3C, IE 10+/ Edge, F
 
 }
 
+.nav-bar h1 {
+  padding-left: 10%;
+}
+
 .nav-bar .buttons {
   display: flex;
   align-items: center;
@@ -71,23 +75,17 @@ background: linear-gradient(to right, #E2E2E2, #C9D6FF); /* W3C, IE 10+/ Edge, F
 
 @media screen and (max-width: 858px) {
 	.nav-bar {
-		height: 65px;
-	
+	/* 	height: 65px; */
+    align-items: center;
 	}
-
-	.logo {
-		font-size: 20px;
-		padding-left: 35px;
-	  }
 	.buttons {
-		top: -100vh;
-		text-align: center;
-		transition: all .4s;
-		width: 46%;
-		padding-bottom: 15px;
+    width: 55%;
 	}
 
-	button {
-		font-size: 16px;
-	}
+  .nav-bar button {
+    width: 140px;
+    font-size: 15px;
+
+    text-align: center;
+  }
 }

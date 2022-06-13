@@ -1,18 +1,14 @@
 import React from "react";
 import "./Nav.css";
 
-
-
-
 const nav = () => {
-  
   return (
     <div>
       <nav className="nav-bar">
-        <img className="logo" src="C:\FACU\TPI-LAB\tpi-integrador-lab3\expensas-tpi\src\components\main\isologotipo_blanco.png"></img>
+        <h1>Expensas</h1>
         <div className="buttons">
-          <button>Vecinos</button>
-          <button>Administrador</button>
+          <button>INICIAR SESION</button>
+          <button>REGISTRARSE</button>
         </div>
       </nav>
     </div>

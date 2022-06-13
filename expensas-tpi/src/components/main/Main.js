@@ -10,12 +10,12 @@ const main = () => {
       <div className="title-section">
       <h1>Bienvenido a <br/>Autogestion Expensas!</h1>
       <p>
-        Una nueva experiencia en gestión de consorcios.<br/> Sistema integral para la
+        Una nueva experiencia en gestión de consorcios.<br/> Un sistema integral para la
         administración de edificios privados.
       </p>
       </div>
       <div className="form-login">
-        <Form />
+       {/*  <Form /> */}
       </div>
 {/*       <SignInForm /> */}
     

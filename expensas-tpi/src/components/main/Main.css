@@ -1,4 +1,7 @@
-
+body{
+    background: -webkit-linear-gradient(to right, #E2E2E2, #C9D6FF);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #E2E2E2, #C9D6FF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
   
 
 
@@ -12,6 +15,7 @@
     height: 45vw;
 }
 
+
 .form-login{
     padding-top: 50px;
     padding-right: 15%;
@@ -21,8 +25,26 @@
 
 
 .title-section {
-    padding-bottom: 10%;
-    width: 80%;
-    padding-left: 10%;
-    font-size: 20px;
+    padding: 0 0 10% 10%;
+    width: 100%;
+    font-size: 30px;
+}
+
+@media screen and (max-width: 858px) {
+    .main-group {
+        flex-direction: column;
+        margin: 60% 9% 0 0;
+        width: 100%;
+    }
+
+    .title-section p {
+        font-size: 19px;
+    }
+    .title-section {
+        margin-right: 19%;
+    }
+
+    .form-login {
+        padding-top: 0;
+    }
 }
