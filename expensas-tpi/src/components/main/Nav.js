@@ -1,12 +1,15 @@
 import React from "react";
-import "./Nav.css";
+import Lightswitch from "./Lightswitch";
 
-const nav = () => {
+import './Nav.css'
+const Nav = () => {
   return (
     <div>
       <nav className="nav-bar">
         <h1>Expensas</h1>
+        
         <div className="buttons">
+        <Lightswitch />
           <button>INICIAR SESION</button>
           <button>REGISTRARSE</button>
         </div>
@@ -15,4 +18,4 @@ const nav = () => {
   );
 };
 
-export default nav;
+export default Nav;

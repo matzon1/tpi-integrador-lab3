@@ -1,12 +1,14 @@
-import Nav from './components/main/Nav';
-import Main from './components/main/Main';
 import './App.css';
+import {DarkModeProvider} from './components/context/DarkModeContext';
+import Container from './components/main/Container';
+
 
 function App() {
   return (
     <div>
-     <Nav/>
-     <Main/>
+     <DarkModeProvider>
+     <Container />
+     </DarkModeProvider>
     </div>
   );
 }
