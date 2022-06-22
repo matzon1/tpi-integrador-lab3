@@ -1,0 +1,21 @@
+{
+    "users":[
+        {
+            "id":1,
+            "super":1,
+            "surname": "Gonzalez",
+            "name": "Carlos",
+            "email": "carlosgonzales@gmail.com",
+            "password": "e10adc3949ba59abbe56e057f20f883e" 
+            
+        },
+        {
+            "id":2,
+            "super":0,
+            "surname": "Ramirez",
+            "name": "Adrian",
+            "email": "adrianramirez@gmail.com",
+            "password": "4625c73f2ce4989799ae7988af3ce623"
+        }
+    ]
+}

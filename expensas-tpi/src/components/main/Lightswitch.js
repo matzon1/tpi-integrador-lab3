@@ -1,5 +1,8 @@
 import React, { useContext } from 'react'
 import { DarkModeContext } from '../context/DarkModeContext'
+import luna from '../../images/luna.png'
+import sol from '../../images/sol.png'
+import './Lightswitch.css'
 
 function Lightswitch() {
   const {darkMode, manageDarkMode} = useContext(DarkModeContext);
@@ -8,7 +11,7 @@ function Lightswitch() {
   }  
   return (
     <div className='Lightswitch'><img src={darkMode ?
-        `../images\icons8-dark-mode-96.png` : `../images\icons8-sol-96.png`} alt="Darkmode off" onClick={handleDarkMode} />
+        luna : sol} alt="Darkmode off" onClick={handleDarkMode} />
     </div>
   )
 }
