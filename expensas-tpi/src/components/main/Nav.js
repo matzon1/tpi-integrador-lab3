@@ -9,9 +9,9 @@ const Nav = () => {
         <h1>Expensas</h1>
         
         <div className="buttons">
-        <Lightswitch />
           <button>INICIAR SESION</button>
           <button>REGISTRARSE</button>
+        <Lightswitch />
         </div>
       </nav>
     </div>

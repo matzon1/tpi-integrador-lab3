@@ -2,6 +2,10 @@
     background-color: #000;
 }
 
+.Container-dark {
+    color: white;
+}
+
 .Container-light{
     background-color: rgb(216, 216, 216);
 }
