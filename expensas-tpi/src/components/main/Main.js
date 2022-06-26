@@ -1,7 +1,4 @@
 import React from "react";
-import { SignInForm } from "../SignInForm";
-
-import Form from "./Form";
 import "./Main.css";
 
 const main = () => {
@@ -14,11 +11,6 @@ const main = () => {
         administración de edificios privados.
       </p>
       </div>
-      <div className="form-login">
-       {/*  <Form /> */}
-      </div>
-{/*       <SignInForm /> */}
-    
     </div>
   );
 };
