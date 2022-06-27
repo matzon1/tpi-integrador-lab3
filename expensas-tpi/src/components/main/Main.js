@@ -1,4 +1,5 @@
 import React from "react";
+import Form from "./Form";
 import "./Main.css";
 
 const main = () => {
@@ -11,6 +12,7 @@ const main = () => {
         administración de edificios privados.
       </p>
       </div>
+      <Form/>
     </div>
   );
 };
