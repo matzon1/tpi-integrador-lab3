@@ -6,13 +6,19 @@ const main = () => {
   return (
     <div className="main-group">
       <div className="title-section">
-      <h1>Bienvenido a <br/>Autogestion Expensas!</h1>
-      <p>
-        Una nueva experiencia en gestión de consorcios.<br/> Un sistema integral para la
-        administración de edificios privados.
-      </p>
+        <h1>
+          Bienvenido a <br />
+          Autogestion Expensas!
+        </h1>
+        <p>
+          Una nueva experiencia en gestión de consorcios.
+          <br /> Un sistema integral para la administración de edificios
+          privados.
+        </p>
       </div>
-      <Form/>
+        <div className="form-section">
+      <Form />
+      </div>
     </div>
   );
 };

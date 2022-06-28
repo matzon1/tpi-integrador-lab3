@@ -1,57 +1,59 @@
-body{
-/*     background: -webkit-linear-gradient(to right, #E2E2E2, #C9D6FF); 
-    background: linear-gradient(to right, #E2E2E2, #C9D6FF);  */
-}
-  
-
 
 .main-group {
     display: flex;
     justify-content: center;
     align-items: center;
-/*     background: #C9D6FF; 
-    background: -webkit-linear-gradient(to right, #E2E2E2, #C9D6FF); 
-    background: linear-gradient(to right, #E2E2E2, #C9D6FF); */
-    height: 45vw;
+    height: 100vh;
+    padding: 0;
 }
 
-
-.form-login{
-    padding-top: 50px;
-    padding-right: 15%;
-    float: right;
-    width: 100%;
+.form-section {
+    width: 40%;
 }
 
 
 .title-section {
-    padding: 0 0 10% 10%;
-    width: 100%;
     font-size: 30px;
 }
 
-@media screen and (max-width: 858px) {
+@media screen and (max-width: 900px) {
     .main-group {
         flex-direction: column;
         width: 100%;
-        height: 100vh;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+        padding-top: 10%;
     }
 
+    .title-section h1 {
+        font-size: 50px;
+    }
+ 
     .title-section p {
         font-size: 19px;
     }
     .title-section {
-        margin: 0;
+        margin-left: 12%;
         
     }
 
-    .title-section {
-        padding-bottom: 50%;
-    }
 
     .title-section p {
         width: 85%;
         padding-top: 5%;
         text-align: justify;
+    } 
+
+    .form-section {
+        width: 100%;
+        height: 100%;
+        padding-top: 5%;
     }
 }
+
+/*  @media screen and (max-width: 850px) {
+    .title-section h1 {
+        font-size: 40px;
+    }
+}   */
