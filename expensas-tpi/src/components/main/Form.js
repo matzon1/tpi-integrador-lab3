@@ -8,7 +8,7 @@ export const Form = () => {
   const [email, setEmail] = useState("");
   const [cellphone, setCellphone] = useState("");
   const [consult, setConsult] = useState([]);
-  const [errors, setErrors] = useState("");
+  
 
   const changeName = (event) => {
     console.log(event.target.value);
@@ -31,67 +31,36 @@ export const Form = () => {
   };
 
   const changeConsult = (event) => {
-    console.log(event.targer.value);
+    console.log(event.target.value);
     setConsult(event.target.value);
   };
-
-  const generateFormObject = () => {
-    const formData = {
-      name,
-      surname,
-      email,
-      cellphone,
-    };
-    return formData;
-  };
-
-  useEffect(() => {
-    if (name || surname || email || cellphone) {
-      setErrors(validate(generateFormObject()));
+  const sendConsulta = (name, surname, email, cellphone, consult) =>{
+    
+    if (name.lenght < 2 ){
+      return("Inserte un nombre válido");
     }
-  }, [name, surname, email, cellphone]);
-
-  const validationRequirements = {
-    name: { required: true, minLength: 3 },
-    surname: { required: true, minLength: 3 },
-    email: {
-      required: true,
-      regularExpression:
-        /[a-zA-Z0-9]+[\.]?([a-zA-Z0-9]+)?[\@][a-z]{3,9}[\.][a-z]{2,5}/g,
-    },
-    cellphone: { required: true },
-  };
-
-  const validate = (formData) => {
-    let errors = {};
-    if (formData) {
-      Object.keys(validationRequirements).forEach((key) => {
-        if (validationRequirements[key].required && !formData[key]) {
-          errors[key] = "El campo es obligatorio.";
-        } else if (
-          validationRequirements[key].minLength > 0 &&
-          formData[key].lenght < validationRequirements[key].minLength
-        ) {
-          errors[key] =
-            "El campo debe tener al menos " +
-            validationRequirements[key].minleLength +
-            " caracteres";
-          //  }else if(validationRequirements[key].regularExpression.test(formData[key])){
-          //     errors[key] = 'El email tiene que ser valido';
-        }
-      });
+    if (surname.lenght < 2 ){
+      return("Inserte un apellido válido");
     }
-    return errors;
+    if (!email.includes('@') ){
+      return("Inserte un mail válido");
+    }
+    // if(cellphone.lenght < 6 && !cellphone.typeof(double)){
+    //   alert("Inserte un número de celular válido");
+    // }
+  
+    if(consult.lenght < 15){
+      return("La consulta tiene que ser más larga");
+    }
   };
+
+  const errorMessage = sendConsulta(name, surname, email, cellphone, consult)
 
   const submitHandler = (event) => {
     event.preventDefault();
-    const formData = generateFormObject();
-    const errors = validate(formData);
-    if (Object.keys(errors).length > 0) {
-      setErrors(errors);
-      return;
-    }
+  
+    sendConsulta(name, surname, email, cellphone, consult);
+
     //habria que ver de enlazar la data a auth0 y un mail to
     setName("");
     setSurname("");
@@ -100,6 +69,8 @@ export const Form = () => {
     setConsult("");
   };
 
+
+
   return (
     <div className="login-form">
       <label className="form-title">CONTACTESE CON NOSOTROS</label>
@@ -107,11 +78,11 @@ export const Form = () => {
         <div className="login-form-items">
           <label>Ingrese su nombre</label>
           <input
-            value={name}
-            onChange={changeName}
+          value={name}
+          onChange={changeName}
             type="text"
           />
-          {errors?.name && <div className="red">{errors.name}</div>}
+        <p>{errorMessage}</p>
         </div>
         <div className="login-form-items">
           <label>Ingrese su apellido</label>
@@ -120,9 +91,8 @@ export const Form = () => {
             onChange={changeSurname}
             type="text"
           />
-          {errors?.surname && <div className="red">{errors.surname}</div>}
+          <p>{errorMessage}</p>
         </div>
-
         <div className="login-form-items">
           <label>Ingrese su numero de Teléfono</label>
           <input
@@ -130,7 +100,7 @@ export const Form = () => {
             onChange={changeCellphone}
             type="tel"
           />
-          {errors?.cellphone && <div className="red">{errors.cellphone}</div>}
+         <p>{errorMessage}</p>
         </div>
         <div className="login-form-items">
           <label>Ingrese su Email</label>
@@ -139,7 +109,7 @@ export const Form = () => {
             onChange={changeEmail}
             type="email"
           />
-          {errors?.email && <div className="red">{errors.email}</div>}
+         <p>{errorMessage}</p>
         </div>
         <div className="login-form-items">
           <label>Ingrese su consulta</label>
@@ -148,8 +118,9 @@ export const Form = () => {
             onChange={changeConsult}
           />
         </div>
+        <p>{errorMessage}</p>
         <div className="login-form-items">
-          <button type="submit">Enviar</button>
+          <button type="submit" disabled={errorMessage}>Enviar</button>
         </div>
       </form>
     </div>
