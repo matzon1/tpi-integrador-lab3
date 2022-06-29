@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useAuthDispatch, useAuth } from '../context/AuthContextProvider';
 
 export default function Login () {
@@ -9,7 +9,9 @@ export default function Login () {
     // equivalente: const auth = useContext(AuthContext);
     const auth = useAuth();
 
-
+    useEffect(() => {
+      console.log(auth.currentUser);
+    }, [auth.currentUser])
     return (
         <div>
             <label>Email</label>

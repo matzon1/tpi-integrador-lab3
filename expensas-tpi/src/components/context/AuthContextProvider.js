@@ -23,6 +23,20 @@ export default function AuthContextProvider ({ children }) {
         // REVIEW: 3. dispatcher async
         login: (email, password) => {
             dispatch({ type: 'setWaitingLogin', waiting: true });
+            fetch(baseUrl)
+            .then ((response) => {
+                return response.json()
+            }
+            )
+            .then ((body) => {
+                console.log(body);
+                const user = body.find(x=>x.name === email && x.password === password)
+                if (!user) {
+                    dispatch({ type: 'setError', error: 'Usuario inexistente.' });
+                }
+                dispatch({ type: 'setCurrentUser', currentUser: user });
+            })
+            return;
             fetch(baseUrl + '/auth/login', {
               method: 'POST',
               body: JSON.stringify({ email, password })
