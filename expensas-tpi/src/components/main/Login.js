@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useAuthDispatch, useAuth } from '../context/AuthContextProvider';
+import "./Login.css";
+
 
 export default function Login () {
     const [email, setEmail] = useState('');
@@ -13,7 +15,7 @@ export default function Login () {
       console.log(auth.currentUser);
     }, [auth.currentUser])
     return (
-        <div>
+        <div className="login-container">
             <label>Email</label>
             <input value={email} onChange={(event) => { setEmail(event.target.value) }} type="text" />
             <label>Password</label>

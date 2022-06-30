@@ -29,12 +29,15 @@ export default function AuthContextProvider ({ children }) {
             }
             )
             .then ((body) => {
-                console.log(body);
+                /* console.log(body); */
                 const user = body.find(x=>x.name === email && x.password === password)
-                if (!user) {
-                    dispatch({ type: 'setError', error: 'Usuario inexistente.' });
-                }
-                dispatch({ type: 'setCurrentUser', currentUser: user });
+                if (user) {
+                    dispatch({ type: 'setCurrentUser', currentUser: user, error: 'Usuario correcto' });
+                    console.log(user);
+                }  else {
+                dispatch({ type: 'setError', error: 'Usuario inexistente.' });
+                alert("Usuario incorrecto");
+                } 
             })
             return;
             fetch(baseUrl + '/auth/login', {
