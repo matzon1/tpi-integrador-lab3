@@ -26,7 +26,6 @@ const Container = () => {
     {!auth.currentUser &&
     <>
     <Main />
-    <Login/>
     </>
     }
     
