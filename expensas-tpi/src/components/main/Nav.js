@@ -3,7 +3,7 @@ import { NavLink, Route, Routes, BrowserRouter } from "react-router-dom";
 import { useState } from "react";
 import Login from "./Login";
 import Lightswitch from "./Lightswitch";
-import Main from "./Main";
+
 
 import "./Container.css";
 import "./Nav.css";
