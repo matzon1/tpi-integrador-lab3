@@ -9,11 +9,14 @@ export const Form = () => {
   const [cellphone, setCellphone] = useState("");
   const [consult, setConsult] = useState([]);
 
+
   const errorName = validName(name);
   const errorSurname = validSurname(surname);
   const errorCellphone = validCellphone(cellphone);
   const errorEmail = valiEmail(email);
   const errorConsulta = valiConsulta(consult);
+
+
 
   return (
     <div className="login-form">
@@ -29,7 +32,6 @@ export const Form = () => {
           <input
             value={name}
             onChange={(ev) => setName(ev.target.value)}
-            onFocus={validName}
             type="text"
           />
           <p>{errorName}</p>
@@ -54,8 +56,8 @@ export const Form = () => {
         </div>
         <div className="login-form-items">
           <label>Ingrese su Email</label>
-          <input value={email} onChange={(ev) => setEmail(ev.target.value)} type="email" />
-          <p>{errorEmail}</p>
+          <input value={email} onChange={(ev) => setEmail(ev.target.value)} type="email" required />
+          { <p>{errorEmail}</p> }
         </div>
         <div className="login-form-items">
           <label>Ingrese su consulta</label>
@@ -72,23 +74,22 @@ export const Form = () => {
   );
 };
 
-const validName = (name) => {
-  if (name.length < 2) return "malaso";
-};
+ const validName = (name) => {
+    if (name.length < 2 && name.length > 0) return "malaso"; };
 
 const validSurname = (surname) => {
-  if (surname.length < 5) return "error";
+  if (surname.length < 3 && surname.length > 0) return "error";
 };
 
 const validCellphone = (cellphone) => {
-  if (cellphone.length < 7) return "numero de telefono incorrecto";
+  if ((cellphone < 100000) && (cellphone > 9999999999)) return "numero de telefono incorrecto";
 };
-
-const valiEmail = (email) => {
-  if (!email.includes('@')) return "email incorrecto";
-}
+//!(phone.match('[0-9]{10}'))
+ const valiEmail = (email) => {
+   if (!email.includes('@')) return "email incorrecto";
+ }
 
 const valiConsulta = (consult) => {
-  if (consult.length < 10) return "ingrese una consulta mas larga";
+  if (consult.length < 10 && consult.length > 0) return "ingrese una consulta mas larga";
 }
 export default Form;
