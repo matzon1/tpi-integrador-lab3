@@ -16,12 +16,12 @@ export default function Login () {
     }, [auth.currentUser])
     return (
         <div className="login-container">
-            <label>Email</label>
+            <label>Usuario</label>
             <input value={email} onChange={(event) => { setEmail(event.target.value) }} type="text" />
-            <label>Password</label>
+            <label>Contraseña</label>
             <input value={password} onChange={(event) => { setPassword(event.target.value) }} type="password" />
             {   auth.waitingLogin &&
-                    <p>Logueando por favor espere ....</p>
+                    <p className='logginp'>Logueando por favor espere ....</p>
             }
             {   !auth.waitingLogin &&
                 <button

@@ -1,8 +1,14 @@
 .userloged {
-    margin-top: 6%;
-    margin-left: 24%;
-    height: 760px;
-    width: 50%;
+    margin-top: 10%;
+    height: 100vh;
+    width: 60%;
+    margin-left: 35%;
+}
+
+.container {
+    width: 70%;
+    height: 100%;
+    max-width: 600px;
 }
 
 .text-loged {
@@ -13,3 +19,41 @@
     color: white;
     height: 40%;
 }
+
+.text-loged p {
+    font-size: 20px;
+    margin-top: 2%;
+}
+
+.text-loged h1 {
+    text-align: center;
+    font-size: 45px;
+}
+
+.text-loged button {
+    background: #1f53c5 !important;
+    border: 2px solid #1f53c5;
+    border-radius: 28px;
+    display: inline-block;
+    cursor: pointer;
+    color: white;
+    font-size: 14px !important;
+    padding: 10px;
+    margin-top: 20px;
+    margin-right: 7%;
+    float: right;
+    width: 30%;
+    height: 60px;
+}
+
+
+.text-loged button:hover {
+    color: rgb(6, 186, 222);
+    border: 1px solid rgba(24, 128, 149, 1 );
+    text-shadow: 0px 1px 0px rgba(24, 128, 149, 1);
+    transition: 0.2s;
+  }
+  .text-loged button:active {
+    position: relative;
+    top: 1px;
+  }
