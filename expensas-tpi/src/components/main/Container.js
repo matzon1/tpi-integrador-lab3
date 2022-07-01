@@ -18,12 +18,11 @@ const Container = () => {
   const {darkMode} = useContext(DarkModeContext);
     return (
     <div className={darkMode ? 'Container Container-dark' : 'Container Container-light'}>
+    <Nav/>
     {auth.currentUser && 
     <>
     <Userlogged/>
-    
     </>}
-    <Nav/>
     {!auth.currentUser &&
     <>
     <Main />

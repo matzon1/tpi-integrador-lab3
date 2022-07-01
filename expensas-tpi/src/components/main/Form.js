@@ -29,6 +29,7 @@ export const Form = () => {
           <input
             value={name}
             onChange={(ev) => setName(ev.target.value)}
+            onFocus={validName}
             type="text"
           />
           <p>{errorName}</p>
